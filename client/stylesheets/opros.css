@@ -215,3 +215,5 @@ select.browser-default option:focus {
 select.browser-default:focus+label {
 	color: #26a69a;
 }
+
+/*Vote result*/
