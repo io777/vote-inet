@@ -1,3 +1,63 @@
 <template name="vote_result">
-	<div class="chart"></div>
+	<section>
+		<div class="container vote-result">
+			<div class="row main-title">
+				<div class="col s12 m12 l12 center-align">
+					<span>Результаты голосования (всего проголосовало <span class="kol orange-text text-accent-4">{{ votes }}</span> человек)</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12 m12 l12">
+					<div class="card center-align lime lighten-1">
+						<div class="card-title-custom">
+							<span class="black-text">Из какого вы дачного кооператива?</span>
+						</div>
+						<div class="houseChart"></div>
+					</div>
+				</div>
+				<div class="col s12 m6 l6">
+					<div class="card center-align lime lighten-1">
+						<div class="card-title-custom">
+							<span class="black-text">Какая скорость интернета Вам нужна?</span>
+						</div>
+						<div class="speedChart"></div>
+					</div>
+				</div>
+				<div class="col s12 m6 l6">
+					<div class="card center-align lime lighten-1">
+						<div class="card-title-custom">
+							<span class="black-text">Сколько Вы готовы платить за интернет?</span>
+						</div>
+						<div class="moneyChart"></div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12 m4 l4">
+					<div class="card center-align lime lighten-1">
+						<div class="card-title-custom">
+							<span class="black-text">Какой способ оплаты для Вас наиболее удобен?</span>
+						</div>
+						<div class="payChart"></div>
+					</div>
+				</div>
+				<div class="col s12 m4 l4">
+					<div class="card center-align lime lighten-1">
+						<div class="card-title-custom">
+							<span class="black-text">По какой технологии у Вас сейчас подключен интернет?</span>
+						</div>
+						<div class="technologyChart"></div>
+					</div>
+				</div>
+				<div class="col s12 m4 l4">
+					<div class="card center-align lime lighten-1">
+						<div class="card-title-custom">
+							<span class="black-text">Устраивает ли Вас текущий интернет?</span>
+						</div>
+						<div class="likeCurrentInetChart"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </template>
