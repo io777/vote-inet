@@ -1,3 +1,3 @@
-// Template.vote_layout.onRendered(function () {
+// Template.vote.onRendered(function () {
 // 	 $('select').material_select();
 // });

@@ -1,11 +1,11 @@
-Template.vote_result.helpers({
+Template.voteResult.helpers({
 	votes: function(){
 		var votesCount = Votes.find().count();
 		return votesCount;
 	}
 });
 
-Template.vote_result.onRendered(function () {
+Template.voteResult.onRendered(function () {
 	
 	var votesCount = Votes.find().count();
 	var votes = Votes.find().fetch();

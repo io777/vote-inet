@@ -6,7 +6,6 @@
 
 meteor-platform
 fortawesome:fontawesome
-materialize:materialize
 iron:router
 useraccounts:core
 useraccounts:materialize
@@ -20,3 +19,8 @@ aldeed:autoform
 gildaspk:autoform-materialize
 underscore
 peernohell:c3
+alanning:roles
+aslagle:reactive-table
+anti:i18n
+momentjs:moment
+materialize:materialize@=0.97.0

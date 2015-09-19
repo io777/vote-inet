@@ -12,21 +12,25 @@
 				<!-- <a href="#!" class="brand-logo">Logo</a> -->
 				<a href="#" data-activates="mobile-demo" class="button-collapse white-text"><i class="fa fa-list" id="mobileMenu"></i></a>
 				<ul class="right hide-on-med-and-down">
-					<li><a href="badges.html" class="white-text">Components</a></li>
-					<li><a href="collapsible.html" class="white-text">Javascript</a></li>
-					<li><a href="mobile.html" class="white-text">Mobile</a></li>
+					<li><a href="{{pathFor 'vote'}}" class="white-text">Голосование</a></li>
+					<li><a href="{{pathFor 'voteResult'}}" class="white-text">Графики голосования</a></li>
+					<li><a href="{{pathFor 'voteTable'}}" class="white-text">Таблица голосования </a></li>
+					<li><a href="{{pathFor 'userTable'}}" class="white-text">Таблица пользователей </a></li>
 				</ul>
 				<ul class="side-nav yellow lighten-3" id="mobile-demo">
 					<div id="mobileNavButton">{{> atNavButton }}</div>
-					<li><a href="badges.html" class="black-text">Components</a></li>
-					<li><a href="collapsible.html" class="black-text">Javascript</a></li>
-					<li><a href="mobile.html" class="black-text">Mobile</a></li>
+					<li><a href="{{pathFor 'vote'}}" class="black-text">Голосование</a></li>
+					<li><a href="{{pathFor 'voteResult'}}" class="black-text">Графики голосования</a></li>
+					<li><a href="{{pathFor 'voteTable'}}" class="black-text">Таблица голосования </a></li>
+					<li><a href="{{pathFor 'userTable'}}" class="black-text">Таблица пользователей </a></li>
 				</ul>
 				<ul class="left hide-on-med-and-down">
 					<div id="navButton">{{> atNavButton }}</div>
 				</ul>
 			</div>
 		</nav>
-		{{> yield}}
+		<div class="vote-layout">
+			{{> yield}}
+		</div>
 	</body>
 </template>

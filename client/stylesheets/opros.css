@@ -168,7 +168,7 @@ p.inet {
 
 /*vote form*/
 #voteForm {
-	margin-top: 100px;
+	margin-top: 80px;
 	background-color: white;
 	border-radius: 20px;
 	padding: 20px;
@@ -216,15 +216,16 @@ select.browser-default:focus+label {
 	color: #26a69a;
 }
 
-/*Vote result*/
-.vote-result {
+/*Vote layout*/
+.vote-layout {
 	font-family: Verdana, sans-serif;
 	font-style: normal;
 	line-height: normal;
 	font-weight: 300;
+	margin-top: 20px;
 }
 .main-title {
-	margin-top: 10px;
+	/*margin-top: 10px;*/
 	font-size: 280%;
 }
 .card-title-custom {
