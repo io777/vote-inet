@@ -1,16 +1,14 @@
 Meteor.startup(function () {
   // test with gmail
   
-  process.env.MAIL_URL='smtp://maddesire%40inbox.ru:' + encodeURIComponent("Zk.,k.,f,e2015") + '@smtp.mail.ru:465';
+  process.env.MAIL_URL='smtp://opros.intreneta%40mail.ru:' + encodeURIComponent("{thdfvdctv777") + '@smtp.mail.ru:465';
   // test with SendGrid
   // process.env.MAIL_URL = 'smtp://your_username:your_password@smtp.sendgrid.net:587';
-
   console.log(process.env);
 });
 
-Accounts.emailTemplates.siteName = "AwesomeSite";
-Accounts.emailTemplates.from = "AwesomeSite Admin <maddesire@inbox.ru>";
-
+// Accounts.emailTemplates.siteName = "Опрос интернета";
+// Accounts.emailTemplates.from = "Опрос интренета <opros.intreneta@mail.ru>";
 
 // if (Meteor.isServer) {
     // Email.send({

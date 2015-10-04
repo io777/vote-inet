@@ -1,10 +1,89 @@
-<template name="userTable">
+<template name="insertUserForm">
 	<section>
 		<div class="container">
 			<div class="row">
+				<div class="col s12 m4 l3">
+					<a href="{{pathFor 'userList'}}" class="waves-effect waves-light btn btnBackList light-blue"><i class="fa fa-arrow-left"></i> Назад к списку</a>
+				</div>
+				<div class="col s12 m6 l6 center-align">
+					<div class="card-panel">
+						<h4 class="header2">Добавить пользователя</h4>
+						<div class="row">
+							{{> quickForm collection="Meteor.users" buttonContent="Добавить" id="insertUserForm" type="insert" buttonClasses="waves-effect waves-light btn orange accent-4" fields="username,emails,createdAt,vote,roles"}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</template>
+
+<template name="userList">
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col s12 m12 l12 center-align">
+					<h4 class="orange-text text-accent-4">Таблица пользователей</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12 m2 l2 valign-wrapper"><h6 class="valign count"> Всего пользователей: {{userCount}}</h6></div>
+				<div class="col s12 m4 l4">
+					<a href="{{pathFor 'insertUserForm'}}" class="waves-effect waves-light btn green">Добавить пользователя</a>
+				</div>
+			</div>
+			<div class="row">
 				<div class="col s12 m12 l12">
-					<h5>Таблица пользователей</h5>
 					{{> reactiveTable settings=settings}}
+				</div>
+			</div>
+		</div>
+	</section>
+</template>
+
+<template name="updateUserForm">
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col s12 m4 l3">
+					<a href="{{pathFor 'userList'}}" class="waves-effect waves-light btn btnBackList light-blue"><i class="fa fa-arrow-left"></i> Назад к списку</a>
+				</div>
+				<div class="col s12 m6 l6 center-align">
+					<div class="card-panel">
+						<h4 class="header2">Изменить пользователя</h4>
+						<div class="row">
+							{{> quickForm collection="Meteor.users" buttonContent="Изменить" buttonClasses="waves-effect waves-light btn orange accent-4" doc=this id="updateUserForm" type="update" fields="username,emails,createdAt,vote,roles"}}
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</section>
+</template>
+
+<template name="setPasswordForm">
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col s12 m4 l4">
+					<a href="{{pathFor 'userList'}}" class="waves-effect waves-light btn btnBackList light-blue"><i class="fa fa-arrow-left"></i> Назад к списку</a>
+				</div>
+				<div class="col s12 m6 l4 center-align">
+					<div class="card-panel">
+						<h4 class="header2">Установить пароль</h4>
+						<div class="row">
+							<form class="col s12" id="addPasswordForm">
+								<div class="row">
+									<div class="input-field col s12">
+										<input id="password" type="password" name="password" class="validate" pattern=".{5,15}" required title="5 to 15 символов">
+										<label for="password">Password</label>
+										<input type="submit" name="submit" value="Применить" class="waves-effect waves-light btn orange accent-4"/>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

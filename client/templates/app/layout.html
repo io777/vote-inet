@@ -1,14 +1,48 @@
 <template name="layout">
 	<head>
-		<title>Опрос!</title>
+		<title>Опрос интернета в Сургуте!</title>
 		<meta charset="UTF-8"/>
 		<!--Let browser know website is optimized for mobile-->
 		<!-- <meta name="viewport" content="width=700" /> -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="description" content="Вам нужен интернет в Сургуте? Опрос интернета в Сургуте. Голосовать за интернет в Сургуте" />
+		<meta name="keywords" content="опрос, Сургут, интернет, голос, голосование" />
+		<link rel="icon" type="image/x-icon" href="/images/favicon.ico"/>
 	</head>
 
 	<body>
 		{{> yield}}
 	</body>
+
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript">
+		(function (d, w, c) {
+			(w[c] = w[c] || []).push(function() {
+				try {
+					w.yaCounter32845750 = new Ya.Metrika({
+						id:32845750,
+						clickmap:true,
+						trackLinks:true,
+						accurateTrackBounce:true,
+						webvisor:true
+					});
+				} catch(e) { }
+			});
+
+			var n = d.getElementsByTagName("script")[0],
+				s = d.createElement("script"),
+				f = function () { n.parentNode.insertBefore(s, n); };
+			s.type = "text/javascript";
+			s.async = true;
+			s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+			if (w.opera == "[object Opera]") {
+				d.addEventListener("DOMContentLoaded", f, false);
+			} else { f(); }
+		})(document, window, "yandex_metrika_callbacks");
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/32845750" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
+
 </template>
 

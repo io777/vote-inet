@@ -1,0 +1,37 @@
+<template name="userStatus">
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col s12 m12 l12 center-align">
+					<h4 class="orange-text text-accent-4">Таблица онлайн пользователей</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12">
+					<table class="responsive-table centered bordered">
+						<thead>
+							<tr>
+								<th>Имя пользователя/Подключение</th>
+								<th>Дата последнего входа</th>
+								<th>IP</th>
+								<th>Данные пользователя</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							{{#each users}}
+								<tr>
+									<td>{{emails.[0].address}}</td>
+									<td>{{lastLoginDate status.lastLogin.date}}</td>
+									<td>{{status.lastLogin.ipAddr}}</td>
+									<td>{{status.lastLogin.userAgent}}</td>
+								</tr>
+							{{/each}}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+</template>
+

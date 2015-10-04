@@ -2,6 +2,11 @@
 Meteor.publish('Votes', function(){
 	return Votes.find();
 });
+// опубликовать один склад
+Meteor.publish('singleVote', function(id) {
+	check(id, String);
+	return Votes.find(id);
+});
 // опубликовать всех пользователей
 Meteor.publish('Users', function() {
 	return Meteor.users.find();

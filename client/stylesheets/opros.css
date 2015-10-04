@@ -2,12 +2,21 @@
 body{
 	background-color: #fff59d;
 	/*font-family: "Comic Sans MS", sans-serif;*/
+	font-family: Verdana, sans-serif;
+	font-style: normal;
+	font-size: small;
+	font-weight: 300;
+	line-height: normal;
+}
+
+.mainPage {
 	font-family: 'lazy Crazy', sans-serif;
 	font-style: italic;
 	font-size: small;
 	font-weight: 900;
 	line-height: normal;
 }
+
 a.btn1 {
 	background-color: white;
 	font-style: normal;
@@ -64,31 +73,53 @@ p.inet {
 	font-size: 150%;
 	font-weight: 300;
 }
+#userEmail {
+	margin-left: 15px;
+}
 
 /*Not found*/
 #notFound {
-	margin-top: 100px;
+	margin-top: 200px;
+	font-family: 'lazy Crazy', sans-serif;
+	font-weight: 400;
 }
 
 /*Loading*/
-#loading {
-	margin-top: 400px;
+
+	/*device*/
+@media screen and (min-device-width: 993px) {
+	#loading {
+		margin-top: 360px;
+	}
+}
+
+@media screen and (max-device-width: 992px) {
+	#loading {
+		margin-top: 210px;
+	}
+}
+
+@media screen and (max-device-width: 600px) {
+	#loading {
+		margin-top: 70px;
+	}
 }
 
 /*Login*/
-#login {
-	margin-top: 100px;
+@media screen and (min-device-width: 993px) {
+	#login {
+		margin-top: 150px;
+	}
 }
-#login-form {
-	background-color: white;
-	border-radius: 25px;
-	border-width: 1px;
-	border-color: black;
-	border-style: solid;
-	font-family: Verdana, sans-serif;
-	font-weight: 300;
-	font-style: normal;
-	line-height: normal;
+@media screen and (max-device-width: 992px) {
+	#login {
+		margin-top: 65px;
+	}
+}
+@media screen and (max-device-width: 600px) {
+	#login {
+		margin-top: 100px;
+	}
 }
 .at-form {
 	padding: 20px;
@@ -99,12 +130,12 @@ p.inet {
 .at-btn:hover {
 	background-color: #ff6d00;
 }
-#at-field-email {
+/*#at-field-email {
 	font-family: sans-serif;
 }
 #at-field-password {
 	font-family: sans-serif;
-}
+}*/
 /*.at-btn:active {
 	background-color: white;
 }*/
@@ -123,7 +154,7 @@ p.inet {
 }*/
 
  /* label underline focus color */
-.input-field input[type=password]:focus {
+/*.input-field input[type=password]:focus {
 	border-bottom: 1px solid #00b8d4;
 	box-shadow: 0 1px 0 0 #00b8d4;
 }
@@ -138,15 +169,23 @@ p.inet {
 .input-field input[type=password].valid {
 	border-bottom: 1px solid #64dd17;
 	box-shadow: 0 1px 0 0 #64dd17;
-}
+}*/
 
 /*Navbar*/
+#dropButton {
+	margin-right: 10px;
+	/*padding-right: 30px;*/
+	width: 150px;
+}
+#caretDown {
+	margin-left: 20px;
+}
+
 .navBar {
 	font-family: Verdana, sans-serif;
 	background-color: #424242;
 	font-weight: 300;
 	font-style: normal;
-
 }
 #navButton {
 	margin-left: 20px;
@@ -156,27 +195,43 @@ p.inet {
 	background-color: #cddc39;
 }
 
-/*verifyEmail*/
-#verifyEmail {
-	font-family: Verdana, sans-serif;
-	font-weight: 300;
-	color: black;
-	font-size: 150%;
-	font-style: normal;
-	line-height: normal;
+/*user form*/
+#insertUserForm {
+	padding: 10px;
+}
+
+#updateUserForm {
+	padding: 10px;
+}
+
+h4.header2 {
+	font-size: 1.1rem;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.userTitle {
+	margin-top: 20px;
 }
 
 /*vote form*/
-#voteForm {
-	margin-top: 80px;
-	background-color: white;
-	border-radius: 20px;
-	padding: 20px;
-	border-style: solid;
-	border-width: 1px;
-	font-family: Verdana, sans-serif;
-	font-weight: 300;
-	font-style: normal;
+#insertVoteForm {
+	padding: 10px;
+}
+
+#updateVoteForm {
+	padding: 10px;
+}
+
+.voteTitle {
+	margin-top: 20px;
+}
+
+.btnBackList {
+	margin-left: 60px;
+}
+.count {
+	font-weight: bold;
 }
 
 /*mobileMenu*/
@@ -201,6 +256,10 @@ select.browser-default option {
 	text-indent: 0;
 }
 select.browser-default+label {
+	-webkit-transform: translateY(-140%);
+	-moz-transform: translateY(-140%);
+	-ms-transform: translateY(-140%);
+	-o-transform: translateY(-140%);
 	transform: translateY(-140%);
 	font-size: 0.8rem;
 }
@@ -222,7 +281,7 @@ select.browser-default:focus+label {
 	font-style: normal;
 	line-height: normal;
 	font-weight: 300;
-	margin-top: 20px;
+	margin-top: 30px;
 }
 .main-title {
 	/*margin-top: 10px;*/
@@ -231,4 +290,16 @@ select.browser-default:focus+label {
 .card-title-custom {
 	margin-top: 10px;
 	font-size: 180%;
+}
+
+/*accessDeniedTitle*/
+#accessDeniedTitle {
+	padding-top: 200px;
+	font-family: 'lazy Crazy', sans-serif;
+	font-weight: 400;
+}
+
+/*changePwd*/
+#changePwd {
+	margin-left: 10px;
 }
