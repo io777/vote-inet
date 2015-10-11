@@ -21,7 +21,7 @@ Meteor.startup(function () {
 
 PrettyEmail.options = {
 	from: 'opros.intreneta@mail.ru',
-	logoUrl: '/images/computer-database-psd-icon-mini.png',
+	logoUrl: 'http://www.opros.maddesire.net/images/house.png',
 	companyName: 'Maddesire',
 	companyUrl: 'http://maddesire.net',
 	companyAddress: 'maddesire.net',
