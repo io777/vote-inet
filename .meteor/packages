@@ -39,3 +39,4 @@ ejson
 spacebars
 check
 materialize:materialize@=0.97.0
+service-configuration
