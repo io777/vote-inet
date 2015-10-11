@@ -154,14 +154,14 @@ Template.voteResult.onRendered(function () {
 
 	_.filter(votes, function(vote){
 		arrayMoney.push(vote.money);
-	})
+	});
 
 	var uniqMoney = _.uniq(arrayMoney);
 
 	_.filter(uniqMoney, function(money){
 		voteMoney.push(money);
 		voteMoneyProcent.push(((((_.where(votes, {money: money})).length) * 100)/votesCount).toFixed(1));
-	})
+	});
 
 	Session.set('voteMoney', voteMoney);
 	Session.set('voteMoneyProcent', voteMoneyProcent);
@@ -222,14 +222,14 @@ Template.voteResult.onRendered(function () {
 
 	_.filter(votes, function(vote){
 		arrayPay.push(vote.pay);
-	})
+	});
 
 	var uniqPay = _.uniq(arrayPay);
 
 	_.filter(uniqPay, function(pay){
 		votePay.push(pay);
 		votePayProcent.push(((((_.where(votes, {pay: pay})).length) * 100)/votesCount).toFixed(1));
-	})
+	});
 
 	Session.set('votePay', votePay);
 	Session.set('votePayProcent', votePayProcent);
@@ -290,14 +290,14 @@ Template.voteResult.onRendered(function () {
 
 	_.filter(votes, function(vote){
 		arrayTechnology.push(vote.technology);
-	})
+	});
 
 	var uniqTechnology = _.uniq(arrayTechnology);
 
 	_.filter(uniqTechnology, function(technology){
 		voteTechnology.push(technology);
 		voteTechnologyProcent.push(((((_.where(votes, {technology: technology})).length) * 100)/votesCount).toFixed(1));
-	})
+	});
 
 	Session.set('voteTechnology', voteTechnology);
 	Session.set('voteTechnologyProcent', voteTechnologyProcent);
@@ -359,14 +359,14 @@ Template.voteResult.onRendered(function () {
 
 	_.filter(votes, function(vote){
 		arrayLikeCurrentInet.push(vote.likeCurrentInet);
-	})
+	});
 
 	var uniqLikeCurrentInet = _.uniq(arrayLikeCurrentInet);
 
 	_.filter(uniqLikeCurrentInet, function(likeCurrentInet){
 		voteLikeCurrentInet.push(likeCurrentInet);
 		voteLikeCurrentInetProcent.push(((((_.where(votes, {likeCurrentInet: likeCurrentInet})).length) * 100)/votesCount).toFixed(1));
-	})
+	});
 
 	Session.set('voteLikeCurrentInet', voteLikeCurrentInet);
 	Session.set('voteLikeCurrentInetProcent', voteLikeCurrentInetProcent);

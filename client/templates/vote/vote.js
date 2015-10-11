@@ -85,41 +85,41 @@ Template.voteList.events({
 });
 // redirect on list after create and edit
 AutoForm.addHooks(['insertVoteForm', 'updateVoteForm'], {
-		after: {
-			insert: function(error, result) {
-				if (error) {
-					alertify.error("Ошибка!", error);
-					console.log("Insert Error:", error);
+	after: {
+		insert: function(error, result) {
+			if (error) {
+				alertify.error("Ошибка!", error);
+				console.log("Insert Error:", error);
+			} else {
+				if (Roles.userIsInRole(Meteor.user(), ['admin','moderator'])) {
+					Router.go('voteList');
 				} else {
-					if (Roles.userIsInRole(Meteor.user(), ['admin','moderator'])) {
-						Router.go('voteList');
-					} else {
-						Router.go('voteResult');
-					}
-					alertify.success("Голос успешно добавлен!");
-					console.log("Insert Result:", result);
-					Meteor.users.update({_id: Meteor.userId()}, {$set: {vote: true}}, function(error, result){
-						if (error) {
-							console.log("Insert Error:", error);
-						} else {
-							console.log("Insert Result:", result);
-						}
-					});
+					Router.go('voteResult');
 				}
-			},
-			update: function(error) {
-				if (error) {
-					alertify.error("Ошибка!", error);
-					console.log("Update Error:", error);
+				alertify.success("Голос успешно добавлен!");
+				console.log("Insert Result:", result);
+				Meteor.users.update({_id: Meteor.userId()}, {$set: {vote: true}}, function(error, result){
+					if (error) {
+						console.log("Insert Error:", error);
+					} else {
+						console.log("Insert Result:", result);
+					}
+				});
+			}
+		},
+		update: function(error) {
+			if (error) {
+				alertify.error("Ошибка!", error);
+				console.log("Update Error:", error);
+			} else {
+				if (Roles.userIsInRole(Meteor.user(), ['admin','moderator'])) {
+					Router.go('voteList');
 				} else {
-					if (Roles.userIsInRole(Meteor.user(), ['admin','moderator'])) {
-						Router.go('voteList');
-					} else {
-						Router.go('voteResult');
-					}
-					alertify.success("Голос успешно изменен!");
-					console.log("Updated!");
+					Router.go('voteResult');
 				}
+				alertify.success("Голос успешно изменен!");
+				console.log("Updated!");
 			}
 		}
-	});
+	}
+});
