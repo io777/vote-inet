@@ -46,7 +46,7 @@ p.vsego {
 }
 
 h1.tit {
-	padding-top: 20px;
+	padding-top: 0px;
 	padding-bottom: 10px;
 }
 
@@ -91,15 +91,23 @@ p.inet {
 
 /*Not found*/
 #notFound {
-	margin-top: 200px;
+	position: absolute;
+	top: 30%;
 	font-family: 'lazy Crazy', sans-serif;
 	font-weight: 400;
 }
 
 /*Loading*/
+#loading {
+	position: absolute;
+	top: 37%;
+	left: 50%;
+	margin-left: -22px;
+}
+
 
 	/*device*/
-@media screen and (min-device-width: 993px) {
+/*@media screen and (min-device-width: 993px) {
 	#loading {
 		margin-top: 360px;
 	}
@@ -115,24 +123,28 @@ p.inet {
 	#loading {
 		margin-top: 70px;
 	}
-}
+}*/
+
 
 /*Login*/
-@media screen and (min-device-width: 993px) {
+#login {
+	margin-top: 5%;
+}
+/*@media screen and (min-device-width: 993px) {
 	#login {
-		margin-top: 150px;
+		margin-top: 5%;
 	}
 }
 @media screen and (max-device-width: 992px) {
 	#login {
-		margin-top: 65px;
+		margin-top: 5%;
 	}
 }
 @media screen and (max-device-width: 600px) {
 	#login {
-		margin-top: 100px;
+		margin-top: 5%;
 	}
-}
+}*/
 
 .at-form {
 	padding: 20px;
@@ -252,6 +264,11 @@ h4.header2 {
 	font-weight: bold;
 }
 
+/*class topUp*/
+.topUp {
+	margin-top: 2%;
+}
+
 /*mobileMenu*/
 #mobileMenu {
 	margin-left: 15px;
@@ -304,12 +321,18 @@ select.browser-default:focus+label {
 	font-style: normal;
 	line-height: normal;
 	font-weight: 300;
-	margin-top: 30px;
+	/*margin-top: 30px;*/
+}
+
+/*Vote-result*/
+
+#vote-result {
+	margin-top: 1%;
 }
 
 .main-title {
 	/*margin-top: 10px;*/
-	font-size: 280%;
+	font-size: 200%;
 }
 
 .card-title-custom {
@@ -319,7 +342,7 @@ select.browser-default:focus+label {
 
 /*accessDeniedTitle*/
 #accessDeniedTitle {
-	padding-top: 200px;
+	margin-top: 30%;
 	font-family: 'lazy Crazy', sans-serif;
 	font-weight: 400;
 }

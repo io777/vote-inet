@@ -1,6 +1,6 @@
 <template name="insertVoteForm">
 	<section>
-		<div class="container">
+		<div class="container topUp">
 			<div class="row">
 			{{#if isInRole 'admin,moderator'}}
 				<div class="col s12 m4 l3">
@@ -54,7 +54,7 @@
 
 <template name="updateVoteForm">
 	<section>
-		<div class="container">
+		<div class="container topUp">
 			<div class="row">
 				<div class="col s12 m4 l3">
 					<a href="{{pathFor 'voteList'}}" class="waves-effect waves-light btn btnBackList light-blue"><i class="fa fa-arrow-left"></i> Назад к списку</a>
