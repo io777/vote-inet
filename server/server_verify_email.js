@@ -4,7 +4,7 @@ Meteor.startup(function () {
 	process.env.MAIL_URL='smtp://opros.intreneta%40mail.ru:' + encodeURIComponent("{thdfvdctv777") + '@smtp.mail.ru:465';
 	// test with SendGrid
 	// process.env.MAIL_URL = 'smtp://your_username:your_password@smtp.sendgrid.net:587';
-	console.log(process.env);
+	// console.log(process.env);
 });
 
 // Accounts.emailTemplates.siteName = "Опрос интернета";

@@ -85,6 +85,20 @@ Template.voteList.events({
 });
 // redirect on list after create and edit
 AutoForm.addHooks(['insertVoteForm', 'updateVoteForm'], {
+	// before: {
+	// 	insert: function(doc){
+	// 		Meteor.users.update({_id: Meteor.userId()}, {$set: {vote: true}}, function(error, result){
+	// 			if (error) {
+	// 				console.log("Insert Error:", error);
+	// 			} else {
+	// 				console.log("Insert Result:", result);
+	// 			}
+	// 		});
+	// 	},
+	// 	update: function(doc){
+			
+	// 	}
+	// },
 	after: {
 		insert: function(error, result) {
 			if (error) {
