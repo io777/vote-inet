@@ -1,7 +1,9 @@
 Template.vote_layout.onRendered(function () {
 	this.autorun(function(){
-		$(".button-collapse").sideNav();
-		$(".dropdown-button").dropdown();
+		Tracker.afterFlush(function(){
+			$(".button-collapse").sideNav();
+			$(".dropdown-button").dropdown();
+		});
 	});
 });
 
