@@ -1,6 +1,6 @@
 Template.vote_layout.onRendered(function () {
-	$(".button-collapse").sideNav();
-	$(".dropdown-button").dropdown();
+	this.$(".button-collapse").sideNav();
+	this.$(".dropdown-button").dropdown();
 });
 
 // i18n.setLanguage('ru');
