@@ -10,7 +10,7 @@
 					<div class="card-panel">
 						<h4 class="header2">Добавить голос</h4>
 						<div class="row">
-							{{> quickForm collection="Votes" buttonContent="Проголосовать" id="insertVoteForm" type="insert" buttonClasses="waves-effect waves-light btn orange accent-4"}}
+							{{> quickForm collection="Votes" buttonContent="Проголосовать" id="insertVoteForm" type="insert" buttonClasses="waves-effect waves-light btn orange accent-4" fields="house,speed,money,pay,technology,likeCurrentInet"}}
 						</div>
 					</div>
 				</div>
@@ -19,7 +19,7 @@
 					<div class="card-panel">
 						<h4 class="header2">Добавить голос</h4>
 						<div class="row">
-							{{> quickForm collection="Votes" buttonContent="Проголосовать" id="insertVoteForm" type="insert" buttonClasses="waves-effect waves-light btn orange accent-4"}}
+							{{> quickForm collection="Votes" buttonContent="Проголосовать" id="insertVoteForm" type="insert" buttonClasses="waves-effect waves-light btn orange accent-4" fields="house,speed,money,pay,technology,likeCurrentInet"}}
 						</div>
 					</div>
 				</div>
@@ -64,7 +64,7 @@
 						<h4 class="header2">Изменить голос</h4>
 						<div class="row">
 					<!-- {{#if isInRole 'admin,moderator'}} -->
-							{{> quickForm collection="Votes" buttonContent="Изменить" doc=this id="updateVoteForm" type="update"}}
+							{{> quickForm collection="Votes" buttonContent="Изменить" doc=this id="updateVoteForm" type="update" fields="house,speed,money,pay,technology,likeCurrentInet"}}
 					<!-- {{/if}} -->
 						</div>
 					</div>

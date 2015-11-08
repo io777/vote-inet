@@ -1,6 +1,6 @@
 Template.vote_layout.onRendered(function () {
 	this.autorun(function(){
-		Tracker.afterFlush(function(){
+		Tracker.afterFlush(function(){ // wait for rendering to be done
 			$(".button-collapse").sideNav();
 			$(".dropdown-button").dropdown();
 		});

@@ -41,6 +41,19 @@ Template.voteList.helpers({
 						return new Spacebars.SafeString('<a><i class="fa fa-pencil fa-lg"></i></a>');
 					}
 				},
+				{ 
+					key: 'userId',
+					label: 'Пользователь',
+					sortable: true,
+					fn: function(value){
+						if (value) {
+							if (Meteor.users.findOne({_id: value})) {
+								var voteUser = Meteor.users.findOne({_id: value.toString()});
+								return voteUser.emails[0].address;
+							}
+						}
+					}
+				},
 				{ key: 'house', label: 'Дачный коопертив', sortable: true},
 				{ key: 'speed', label: 'Какая скорость', sortable: true},
 				{ key: 'money', label: 'Сколько денег готовы платить', sortable: true},
@@ -85,20 +98,20 @@ Template.voteList.events({
 });
 // redirect on list after create and edit
 AutoForm.addHooks(['insertVoteForm', 'updateVoteForm'], {
-	// before: {
-	// 	insert: function(doc){
-	// 		Meteor.users.update({_id: Meteor.userId()}, {$set: {vote: true}}, function(error, result){
-	// 			if (error) {
-	// 				console.log("Insert Error:", error);
-	// 			} else {
-	// 				console.log("Insert Result:", result);
-	// 			}
-	// 		});
-	// 	},
-	// 	update: function(doc){
-			
-	// 	}
-	// },
+	before: {
+		insert: function(doc){
+			var user = Meteor.users.findOne({_id: Meteor.userId()});
+			doc.userId = user._id;
+			AutoForm.validateForm("insertVoteForm");
+			return doc;
+		}
+		// update: function(doc){
+		// 	var user = Meteor.users.findOne({_id: Meteor.userId()});
+		// 	doc.$set.userId = user._id;
+		// 	AutoForm.validateForm("updateVoteForm");
+		// 	return doc;
+		// }
+	},
 	after: {
 		insert: function(error, result) {
 			if (error) {
